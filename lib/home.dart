@@ -14,6 +14,7 @@ import 'aspectRatio.dart';
 import 'animatedList.dart';
 import 'constrainedBox.dart';
 import 'flexible.dart';
+import 'animatedSwitcher.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -35,7 +36,7 @@ class _ListPageState extends State<HomePage> {
     BasicAnimatedOpacity(),
     BasicAnimatedPadding(),
     BasicAnimatedIcon(),
-    BasicAnimatedIcon(),
+    BasicAnimatedSwitcher(),
     BasicAspectRatio(),
     BasicConstrainedBox(),
     BasicDraggable(),

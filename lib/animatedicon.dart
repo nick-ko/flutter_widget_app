@@ -35,9 +35,9 @@ class _HomePageState extends State<BasicAnimatedIcon>
         title: Text("Animted Icon"),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.share),
             onPressed: () {
-              _launchurl('https://github.com');
+              _launchurl('https://github.com/nick-ko/flutter_widget_app/blob/master/lib/animatedicon.dart');
             },
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BasicAnimatedOpacity extends StatefulWidget {
   @override
@@ -19,7 +20,9 @@ class _MyAppState extends State<BasicAnimatedOpacity> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
-            onPressed: () {},
+            onPressed: () {
+              _launchurl('https://github.com/nick-ko/flutter_widget_app/blob/master/lib/animatedList.dart');
+            },
           )
         ],
       ),
@@ -33,6 +36,15 @@ class _MyAppState extends State<BasicAnimatedOpacity> {
         },
       ),
     );
+  }
+
+  void _launchurl(String url) async{
+
+    if(await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
 
@@ -51,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Center(
       child: AnimatedOpacity(
         child: Container(
-          child: Center(child: Text('Hello World')),
+          child: Center(child: Text('NaN')),
           width: 200.0,
           height: 200.0,
           color: Colors.green,
@@ -60,4 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+ 
 }

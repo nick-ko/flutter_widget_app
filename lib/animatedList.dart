@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BasicAnimatedList extends StatefulWidget {
   @override
@@ -30,7 +31,9 @@ class AnimatedListExampleState extends State<BasicAnimatedList> {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.share),
-              onPressed: () {},
+              onPressed: () {
+                _launchurl('https://github.com/nick-ko/flutter_widget_app/blob/master/lib/animatedList.dart');
+              },
             )
           ],
         ),
@@ -81,6 +84,15 @@ class AnimatedListExampleState extends State<BasicAnimatedList> {
         ),
       ),
     );
+  }
+
+  void _launchurl(String url) async{
+
+    if(await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   void _addAnItem() {
