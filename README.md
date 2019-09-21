@@ -1,6 +1,6 @@
 # widget_app
 
-Flutter widget docs.
+Flutter widget documentation App with example .
 
 ## AnimatedIcon
 Affiche une icône animée à une progression d' animation donnée .
@@ -31,7 +31,7 @@ La direction du texte à utiliser pour le rendu de l'icône.
 ## AnimatedList
 Conteneur de défilement qui anime les éléments lorsqu'ils sont insérés ou supprimés.
 
-####Propriétés
+#### Propriétés
 - controller → ScrollController
 Un objet pouvant être utilisé pour contrôler la position dans laquelle défile cette vue défilement.
 final
@@ -72,7 +72,7 @@ final
 Version animée de l' opacité qui fait automatiquement passer l'opacité de l'enfant sur une durée donnée, chaque fois que l'opacité donnée change.
 L'animation d'une opacité est relativement coûteuse car elle nécessite de peindre l'enfant dans un tampon intermédiaire.
 
-####Propriétés
+#### Propriétés
 - child → widget
 Le widget situé sous ce widget dans l'arborescence. [...]
 final

@@ -1,34 +1,21 @@
 import 'package:flutter/material.dart';
-import 'animatedicon.dart';
-import 'richtext.dart';
-import 'limitedbox.dart';
-import 'placeholder.dart';
-import 'animatedPadding.dart';
-import 'mediaQuery.dart';
-import 'animatedOpacity.dart';
-import 'indexedStack.dart';
-import 'ReorderableListView.dart';
-import 'stack.dart';
-import 'draggable.dart';
-import 'aspectRatio.dart';
-import 'animatedList.dart';
-import 'constrainedBox.dart';
-import 'flexible.dart';
-import 'animatedSwitcher.dart';
-import 'semantics.dart';
-import 'spacer.dart';
+import 'package:widget_app/table.dart';
 import 'floatingActionButton.dart';
-import 'pageview.dart';
 import 'pageViewDots.dart';
 import 'sliverAppBar.dart';
-import 'home2.dart';
+import 'SafeArea.dart';
+import 'animatedContainer.dart';
+import 'wrap.dart';
+import 'dismissible.dart';
+import 'transform.dart';
+import 'basics.dart';
 
-class HomePage extends StatefulWidget {
+class HomeTwoPage extends StatefulWidget {
   @override
   _ListPageState createState() => _ListPageState();
 }
 
-class _ListPageState extends State<HomePage> {
+class _ListPageState extends State<HomeTwoPage> {
 
   void toNewPage(Widget widget){
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
@@ -37,55 +24,29 @@ class _ListPageState extends State<HomePage> {
   }
 
   List<Widget> page=[
-    BasicAnimatedIcon(),
-    BasicAnimatedList(),
-    BasicAnimatedOpacity(),
-    BasicAnimatedPadding(),
-    BasicAnimatedIcon(),
-    BasicAnimatedSwitcher(),
-    BasicAspectRatio(),
-    BasicConstrainedBox(),
-    BasicDraggable(),
-    BasicFlexible(),
-    BasicIndexedStack(),
-    BasicAnimatedIcon(),
-    BasicLimitedBox(),
-    BasicMediaQuery(),
-    BasicPlaceholder(),
-    BasicReorderableListView(),
-    BasicRichText(),
-    BasicSemantics(),
-    BasicSpacer(),
-    BasicStack(),
     BasicFloatingActionButton(),
-    BasicPageViewDots(),
     BasicSliverAppBar(),
+    BasicPageViewDots(),
+    BasicTable(),
+    BasicSafeArea(),
+    BasicAnimatedContainer(),
+    BasicWrap(),
+    BasicDismissible(),
+    BasicTransform(),
+    Basics(),
   ];
 
   List<String> title=[
-    "AnimatedIcon",
-    "AnimatedList",
-    "AnimatedOpacity",
-    "AnimatedPadding",
-    "AnimatedPositioned",
-    "AnimatedSwitcher",
-    "AspectRadio",
-    "ConstrainedBox",
-    "Draggable",
-    "Flexible",
-    "IndexedStack",
-    "InheritedWidget",
-    "LimitedBox",
-    "MediaQuery",
-    "Placeholder",
-    "ReorderableListView",
-    "RichText",
-    "Semantics",
-    "Spacer",
-    "Stack",
-    "FloatingActionButton",
-    "PageView",
+    "FloatingActionButton & Tooltip",
     "SliverAppBar",
+    "PageView",
+    "Table & FittedBox",
+    "SafeArea",
+    "Animated Container & Opacity",
+    "Wrap",
+    "Dismissible",
+    "Transform & SizedBox",
+    "Positionned & Expanded & Align"
 
   ];
   List docs;
@@ -223,12 +184,7 @@ class _ListPageState extends State<HomePage> {
             ),
             IconButton(
               icon: Icon(Icons.code, color: Colors.white),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomeTwoPage()),
-                );
-              },
+              onPressed: () {},
             )
           ],
         ),
